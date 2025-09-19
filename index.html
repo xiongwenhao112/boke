@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>熊文豪 | 赛博朋克个人主页</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;700&display=swap" rel="stylesheet">
+    <meta name="description" content="熊文豪的赛博朋克风格个人主页 - 技术分享与创新探索">
+</head>
+<body>
+    <!-- 炫酷加载页面 -->
+    <div class="loading-screen" id="loading-screen">
+        <div class="loading-background">
+            <canvas id="loading-canvas"></canvas>
+            <div class="loading-grid"></div>
+        </div>
+        
+        <div class="loading-content">
+            <div class="loading-logo">
+                <div class="logo-container">
+                    <div class="logo-text">
+                        <span class="logo-char" data-char="熊">熊</span>
+                        <span class="logo-char" data-char="文">文</span>
+                        <span class="logo-char" data-char="豪">豪</span>
+                    </div>
+                    <div class="logo-subtitle">CYBER PROFILE</div>
+                </div>
+                
+                <div class="loading-progress-container">
+                    <div class="loading-text">INITIALIZING SYSTEM...</div>
+                    <div class="loading-bar">
+                        <div class="loading-progress" id="loading-progress"></div>
+                        <div class="loading-glow"></div>
+                    </div>
+                    <div class="loading-percentage" id="loading-percentage">0%</div>
+                </div>
+                
+                <div class="loading-messages" id="loading-messages">
+                    <div class="loading-message">正在连接神经网络...</div>
+                </div>
+            </div>
+            
+            <!-- 加载页面装饰元素 -->
+            <div class="loading-decorations">
+                <div class="loading-circle loading-circle-1"></div>
+                <div class="loading-circle loading-circle-2"></div>
+                <div class="loading-circle loading-circle-3"></div>
+                <div class="loading-hexagon"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 动态背景效果 -->
+    <div class="background-container">
+        <canvas id="particle-canvas"></canvas>
+        <div class="matrix-rain" id="matrix-rain"></div>
+        <div class="scanline"></div>
+        <div class="grid-overlay"></div>
+    </div>
+
+    <!-- 主容器 -->
+    <main class="container">
+        <!-- 头部区域 -->
+        <header class="hero-section">
+            <div class="avatar-container">
+                <div class="avatar-wrapper">
+                    <img src="头像.jpg"
+     alt="熊文豪头像"
+     class="profile-avatar"
+     loading="lazy">
+                    <div class="glow-ring"></div>
+                    <div class="orbit-ring"></div>
+                </div>
+            </div>
+
+            <div class="hero-subtitle">
+                <span class="subtitle-text">Full Stack Developer</span>
+                <span class="subtitle-separator">|</span>
+                <span class="subtitle-text">Tech Enthusiast</span>
+            </div>
+
+            <div class="motto-container">
+                <div class="motto-prefix">></div>
+                <p class="typing-text" id="motto-text"></p>
+                <div class="cursor"></div>
+            </div>
+        </header>
+
+        <!-- 社交平台卡片区域 -->
+        <section class="social-section">
+            <div class="section-title">
+                <h2>Digital Network</h2>
+                <div class="title-decoration"></div>
+                <div class="section-subtitle">连接数字世界的每一个节点</div>
+            </div>
+
+            <div class="cards-grid">
+                <a href="https://blog.csdn.net/weixin_66401877?type=blog"
+                   class="social-card csdn-card"
+                   target="_blank"
+                   data-platform="CSDN">
+                    <div class="card-glow"></div>
+                    <div class="card-content">
+                        <div class="card-header">
+                            <div class="card-icon">
+                                <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z"/>
+                                </svg>
+                            </div>
+                            <div class="card-status">
+                                <div class="status-dot"></div>
+                                <span>ACTIVE</span>
+                            </div>
+                        </div>
+                        <h3>CSDN博客</h3>
+                        <p>技术分享与专业文章</p>
+                        <div class="card-footer">
+                            <span class="card-link">访问博客 →</span>
+                        </div>
+                        <div class="circuit-decoration"></div>
+                    </div>
+                </a>
+
+                <a href="https://juejin.cn/user/1273653172645488/posts"
+                   class="social-card juejin-card"
+                   target="_blank"
+                   data-platform="JUEJIN">
+                    <div class="card-glow"></div>
+                    <div class="card-content">
+                        <div class="card-header">
+                            <div class="card-icon">
+                                <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                                </svg>
+                            </div>
+                            <div class="card-status">
+                                <div class="status-dot"></div>
+                                <span>ACTIVE</span>
+                            </div>
+                        </div>
+                        <h3>稀土掘金</h3>
+                        <p>前沿技术与创新分享</p>
+                        <div class="card-footer">
+                            <span class="card-link">访问掘金 →</span>
+                        </div>
+                        <div class="circuit-decoration"></div>
+                    </div>
+                </a>
+
+                <a href="https://cloud.tencent.com/developer/user/10809644/articles"
+                   class="social-card tencent-card"
+                   target="_blank"
+                   data-platform="TENCENT">
+                    <div class="card-glow"></div>
+                    <div class="card-content">
+                        <div class="card-header">
+                            <div class="card-icon">
+                                <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96z"/>
+                                </svg>
+                            </div>
+                            <div class="card-status">
+                                <div class="status-dot"></div>
+                                <span>ACTIVE</span>
+                            </div>
+                        </div>
+                        <h3>腾讯云社区</h3>
+                        <p>云计算与架构设计</p>
+                        <div class="card-footer">
+                            <span class="card-link">访问社区 →</span>
+                        </div>
+                        <div class="circuit-decoration"></div>
+                    </div>
+                </a>
+
+                <a href="https://github.com/xiongwenhao112"
+                   class="social-card github-card"
+                   target="_blank"
+                   data-platform="GITHUB">
+                    <div class="card-glow"></div>
+                    <div class="card-content">
+                        <div class="card-header">
+                            <div class="card-icon">
+                                <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                                </svg>
+                            </div>
+                            <div class="card-status">
+                                <div class="status-dot"></div>
+                                <span>ACTIVE</span>
+                            </div>
+                        </div>
+                        <h3>GitHub</h3>
+                        <p>开源项目与代码仓库</p>
+                        <div class="card-footer">
+                            <span class="card-link">访问仓库 →</span>
+                        </div>
+                        <div class="circuit-decoration"></div>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <!-- 技能展示区域 -->
+        <section class="skills-section">
+            <div class="section-title">
+                <h2>Tech Stack</h2>
+                <div class="title-decoration"></div>
+            </div>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>Frontend</h3>
+                    <div class="skill-items">
+                        <span class="skill-tag">React</span>
+                        <span class="skill-tag">Vue</span>
+                        <span class="skill-tag">JavaScript</span>
+                        <span class="skill-tag">TypeScript</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Backend</h3>
+                    <div class="skill-items">
+                        <span class="skill-tag">Node.js</span>
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">Java</span>
+                        <span class="skill-tag">Go</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>DevOps</h3>
+                    <div class="skill-items">
+                        <span class="skill-tag">Docker</span>
+                        <span class="skill-tag">K8s</span>
+                        <span class="skill-tag">AWS</span>
+                        <span class="skill-tag">CI/CD</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 状态指示器 -->
+        <footer class="status-bar">
+            <div class="status-item">
+                <span class="status-label">System Status:</span>
+                <span class="status-value online">ONLINE</span>
+            </div>
+            <div class="status-item">
+                <span class="status-label">Connection:</span>
+                <span class="status-value secure">SECURE</span>
+            </div>
+            <div class="status-item">
+                <span class="status-label">Last Update:</span>
+                <span class="status-value" id="last-update">2025-09-20</span>
+            </div>
+        </footer>
+    </main>
+
+    <!-- 音效控制 -->
+    <div class="audio-control" id="audio-control">
+        <button class="audio-toggle" id="audio-toggle">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/>
+            </svg>
+        </button>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
